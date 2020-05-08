@@ -1,0 +1,105 @@
+@import url(https://fonts.googleapis.com/css?family=Lato:300);
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	color: #CDF6FA;
+	font-family: "Lato", sans-serif;
+	background-image: url('back1.jpg');
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+.wrap {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: auto;
+}
+
+.feedback h1 {
+	text-align: center;
+}
+
+.row {
+	position: relative;
+	margin-top: 25px;
+}
+
+.row input,
+  .row textarea {
+	width: 25em;
+	padding: 10px;
+	margin: 0;
+	border: 1px solid #CDF6FA;
+	border-radius: 3px;
+	font-family: inherit;
+	color: inherit;
+	font-size: 15px;
+	background: linear-gradient(120deg, #111111, #111E25);
+}
+
+.button {
+	text-align: center;
+}
+
+.button button {
+	width: 25em;
+	padding: 10px;
+	margin: 0;
+	border: 1px solid #CDF6FA;
+	border-radius: 3px;
+	font-family: inherit;
+	color: inherit;
+	font-size: 15px;
+	background: linear-gradient(120deg, #111111, #111E25);
+	transition: all .4s linear;
+	-moz-transition: all .3s linear;
+	-webkit-transition: all .3s linear;
+	-o-transition: all .3s linear;
+}
+
+.button button:hover {
+	background: #CDF6FA;
+	color: #111111;
+}
+
+.label {
+	position: absolute;
+	top: 11px;
+	left: 11px;
+	font-size: 14px;
+	letter-spacing: 1px;
+	color: #888888;
+	cursor: text;
+	transition: all .20s ease-in-out 0s;
+}
+
+.row_input:focus {
+	box-shadow: inset 0 0 5px #CDF6FA;
+}
+
+.row_input:focus ~ .label,
+.row_input:valid ~ .label {
+	top: -18px;
+	left: 0;
+	font-size: 16px;
+	color: #CDF6FA;
+}
+
+.row_input:focus ~ .label:first-letter,
+.row_input:valid ~ .label:first-letter {
+	text-transform: uppercase;
+}
