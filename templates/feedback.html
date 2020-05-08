@@ -1,0 +1,35 @@
+{% load static %}
+<html>
+    <head>
+      <title> Feedback </title>
+        <link rel="stylesheet" type="text/css" href="{% static 'feedback.css' %} ">
+    </head>
+<body>
+
+<div class="wrap">
+  <div class="feedback">
+    <h1>Feedback Form</h1>
+    <form action="feedback" method="POST">
+      {% csrf_token %}
+      <div class="row">
+        <input type="text" id="text" name="text" class="row_input" required>
+        <label for="text" class="label">Enter your name</label>
+      </div>
+      <div class="row">
+        <input type="email" id="email" name="email" class="row_input" required>
+        <label for="email" class="label">Your Email address</label>
+      </div>
+      <div class="row">
+        <textarea name="message" id="message" name="message" class="row_input" cols="30" rows="5" required></textarea>
+        <label for="message" class="label">Message</label>
+      </div>
+      <div class="row">
+        <div class="button">
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+</body>
+</html>
